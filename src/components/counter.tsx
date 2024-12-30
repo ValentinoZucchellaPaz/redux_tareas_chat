@@ -1,18 +1,18 @@
-import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../types"
+import { useAppSelector } from "../hooks/store"
+import useCounterActions from "../hooks/useCounterActions"
 
 export default function Counter() {
 
-    const count = useSelector((state: RootState) => state)
-    const dispatch = useDispatch()
+    const count = useAppSelector((state) => state.counter)
+    const { incrementCount, decrementCount, resetCount, doubleCount } = useCounterActions()
 
     return (
         <div>
             <h1>{count}</h1>
-            <button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
-            <button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
-            <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button>
-            <button onClick={() => dispatch({ type: 'DOUBLE' })}>Double</button>
+            <button onClick={incrementCount}>+</button>
+            <button onClick={decrementCount}>-</button>
+            <button onClick={resetCount}>Reset</button>
+            <button onClick={doubleCount}>Double</button>
         </div>
     )
 }

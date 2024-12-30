@@ -1,6 +1,10 @@
-import { legacy_createStore as createStore } from '@reduxjs/toolkit'
-import rootReducer from '../reducers/rootReducer'
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counter/slice'
 
-const store = createStore(rootReducer)
+const store = configureStore({
+    reducer: {
+        counter: counterReducer
+    }
+})
 
 export default store
