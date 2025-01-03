@@ -19,7 +19,7 @@ export default function UserAvatar() {
                 {
                     user && (
                         <div className="flex flex-row gap-2 px-2">
-                            <Avatar name={user?.name} src={user ? `https://unavatar.io/x/${user?.name}` : ''} />
+                            <Avatar name={user.name} src={user ? `https://unavatar.io/x/${user.name}` : ''} />
                             <p className="font-semibold">{user.name}<br />{user.email}</p>
                         </div>
                     )

@@ -3,10 +3,10 @@
 // import viteLogo from '/vite.svg'
 import { Route } from 'wouter'
 import './App.css'
-import Counter from './components/counter'
-import { PokemonSearcher } from './components/pokemonSearcher'
+import Counter from './components/Counter'
+import { PokemonSearcher } from './components/PokemonSearcher'
 import Nav from './components/Nav'
-import LoginForm from './components/loginForm'
+import LoginForm from './components/LoginForm'
 
 
 function App() {

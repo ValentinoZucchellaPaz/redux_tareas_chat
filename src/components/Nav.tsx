@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import UserAvatar from "./userAvatar";
+import UserAvatar from "./UserAvatar";
 
 export default function Nav() {
     return (

@@ -1,8 +1,8 @@
 import { useAppSelector } from "../hooks/store"
-import { PokemonCard } from "./pokemonCard"
 import { Button, Heading, Input } from "@chakra-ui/react"
 import { Field } from "./ui/field"
 import usePokemonActions from "../hooks/usePokemonActions"
+import { PokemonCard } from "./PokemonCard"
 
 export function PokemonSearcher() {
     const { data, loading, error } = useAppSelector((state) => state.pokemon)
