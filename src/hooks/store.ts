@@ -1,4 +1,4 @@
-import { AppDispatch, RootState } from "../types";
+import { AppDispatch, RootState } from "../store/types";
 import { useSelector, useDispatch, TypedUseSelectorHook } from "react-redux";
 
 // inferencia de tipos aca para no hacerlo en todos los componentes

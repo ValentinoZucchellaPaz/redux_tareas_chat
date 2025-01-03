@@ -1,4 +1,4 @@
-import { decrement, double, increment, reset } from "../store/counter/slice";
+import { decrement, double, fetchCount, increment, reset, square } from "../store/slices/counterSlice";
 import { useAppDispatch } from "./store";
 
 
@@ -17,6 +17,12 @@ export default function useCounterActions() {
     function doubleCount() {
         dispatch(double())
     }
+    function squareCount() {
+        dispatch(square())
+    }
+    function getRandomAsync() {
+        dispatch(fetchCount())
+    }
 
-    return { incrementCount, decrementCount, resetCount, doubleCount }
+    return { incrementCount, decrementCount, resetCount, doubleCount, squareCount, getRandomAsync }
 }
